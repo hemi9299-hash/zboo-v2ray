@@ -1,27 +1,42 @@
 {
+  "log": { "loglevel": "none" },
   "inbounds": [
     {
       "port": 8080,
-      "protocol": "vmess",
+      "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "9c0938c0-5513-4ff0-90c6-83a6312a4090",
-            "alterId": 0
+            "id": "a3b7de87-b46f-4dcf-b6ed-5bf5ebe83167",
+            "level": 0
           }
-        ]
+        ],
+        "decryption": "none"
       },
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/ws"
+          "path": "/shadow-vip/@l_1AR",
+          "headers": {
+            "Host": "youtube.com" 
+          }
+        },
+        "sockopt": {
+          "tcpFastOpen": true
         }
+      },
+      "sniffing": {
+        "enabled": true,
+        "destOverride": ["http", "tls"]
       }
     }
   ],
   "outbounds": [
     {
-      "protocol": "freedom"
+      "protocol": "freedom",
+      "settings": {
+        "domainStrategy": "UseIP" 
+      }
     }
   ]
 }
