@@ -1,5 +1,7 @@
 {
-  "log": { "loglevel": "none" },
+  "log": {
+    "loglevel": "warning"
+  },
   "inbounds": [
     {
       "port": 8080,
@@ -16,27 +18,15 @@
       "streamSettings": {
         "network": "ws",
         "wsSettings": {
-          "path": "/shadow-vip/@l_1AR",
-          "headers": {
-            "Host": "youtube.com" 
-          }
-        },
-        "sockopt": {
-          "tcpFastOpen": true
+          "path": "/shadow-vip/@l_1AR"
         }
-      },
-      "sniffing": {
-        "enabled": true,
-        "destOverride": ["http", "tls"]
       }
     }
   ],
   "outbounds": [
     {
       "protocol": "freedom",
-      "settings": {
-        "domainStrategy": "UseIP" 
-      }
+      "settings": {}
     }
   ]
 }
