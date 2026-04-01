@@ -1,11 +1,10 @@
 {
   "log": {
-    "loglevel": "info"
+    "loglevel": "warning"
   },
   "inbounds": [
     {
       "port": 8080,
-      "listen": "0.0.0.0",
       "protocol": "vless",
       "settings": {
         "clients": [
